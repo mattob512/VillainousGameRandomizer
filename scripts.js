@@ -31,8 +31,8 @@ function CreateMatchup(numPlayers, baseGame, expansion1, expansion2, expansion3)
   }
 
   characters = shuffle(characters);
-
-  for(int i=0; i<numPlayers; i++){
+  var i;
+  for(i=0; i<numPlayers; i++){
     alert(characters[i]);
   }
 }
