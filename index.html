@@ -11,25 +11,23 @@
     <table>
       <tr>
         <td>
-          <form onsubmit="CreateMatchup(num-players, baseGame, expansion1, expansion2, expansion3)">
-              <label for="num-players">Number of Players: </label>
-              <select id="num-players" name="num-players">
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-                <option value="4">Four</option>
-                <option value="5">Five</option>
-                <option value="6">Six</option>
-              </select><br><br>
-              <input type="checkbox" id="baseGame" name="baseGame" value="0">
-              <label for="baseGame">Villainous: The Worst Takes It All</label><br>
-              <input type="checkbox" id="expansion1" name="expansion1" value="1">
-              <label for="expansion1">Villainous: Evil to the Core</label><br>
-              <input type="checkbox" id="expansion2" name="expansion2" value="2">
-              <label for="expansion2">Villainous: Evil Comes Prepared</label><br>
-              <input type="checkbox" id="expansion3" name="expansion3" value="3">
-              <label for="expansion3">Villainous: Perfectly Wretched</label><br><br>
-              <input type="submit" value="Submit">
-          </form>
+          <label for="num-players">Number of Players: </label>
+          <select id="num-players" name="num-players">
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+            <option value="6">Six</option>
+          </select><br><br>
+          <input type="checkbox" id="baseGame" name="baseGame" value="0">
+          <label for="baseGame">Villainous: The Worst Takes It All</label><br>
+          <input type="checkbox" id="expansion1" name="expansion1" value="1">
+          <label for="expansion1">Villainous: Evil to the Core</label><br>
+          <input type="checkbox" id="expansion2" name="expansion2" value="2">
+          <label for="expansion2">Villainous: Evil Comes Prepared</label><br>
+          <input type="checkbox" id="expansion3" name="expansion3" value="3">
+          <label for="expansion3">Villainous: Perfectly Wretched</label><br><br>
+          <input type="button" onclick="CreateMatchup(num-players, expansion1, expansion2, expansion3)">
         </td>
       </tr>
     </table>
