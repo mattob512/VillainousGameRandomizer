@@ -6,29 +6,28 @@
   <body>
     <h1>Villainous Randomizer<h1>
     <h2>Version 1.0.3</h2>
-
     <!-- Area for user input -->
-    <table>
-      <tr>
-        <td>
-          <label for="playerCount">Number of Players: </label>
-          <select id="playerCount" name="playerCount">
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-            <option value="4">Four</option>
-            <option value="5">Five</option>
-            <option value="6">Six</option>
-          </select><br><br>
-          <input type="checkbox" id="baseGame" name="baseGame" value="0">
-          <label for="baseGame">Villainous: The Worst Takes It All</label><br>
-          <input type="checkbox" id="expansion1" name="expansion1" value="1">
-          <label for="expansion1">Villainous: Evil to the Core</label><br>
-          <input type="checkbox" id="expansion2" name="expansion2" value="2">
-          <label for="expansion2">Villainous: Evil Comes Prepared</label><br>
-          <input type="checkbox" id="expansion3" name="expansion3" value="3">
-          <label for="expansion3">Villainous: Perfectly Wretched</label><br><br>
-          <input type="button" value="Generate" onclick="CreateMatchup()">
-        </td>
+    <div>
+      <label for="playerCount">Number of Players: </label>
+      <select id="playerCount" name="playerCount">
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+        <option value="6">Six</option>
+      </select><br><br>
+      <input type="checkbox" id="baseGame" name="baseGame" value="0">
+      <label for="baseGame">Villainous: The Worst Takes It All</label><br>
+      <input type="checkbox" id="expansion1" name="expansion1" value="1">
+      <label for="expansion1">Villainous: Evil to the Core</label><br>
+      <input type="checkbox" id="expansion2" name="expansion2" value="2">
+      <label for="expansion2">Villainous: Evil Comes Prepared</label><br>
+      <input type="checkbox" id="expansion3" name="expansion3" value="3">
+      <label for="expansion3">Villainous: Perfectly Wretched</label><br><br>
+      <input type="button" value="Generate" onclick="CreateMatchup()">
+    <div>
+    <table id="resultsTable">
+      <tr id="resultsRow">
       </tr>
     </table>
   </body>
@@ -77,6 +76,12 @@
       for(i=0; i<playerCount; i++){
         alert(characters[i]);
       }
+    }
+
+    function createCharacterBox(character) {
+      var tableRow = document.getElementById("resultsRow");
+      var td = document.createElement("td");
+      td.appendChild(document.createTextNode(character));
     }
   </script>
 </htrml>
