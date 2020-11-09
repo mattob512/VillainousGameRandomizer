@@ -51,7 +51,7 @@
         characters.push("Ursula");
       }
       if (expansion1) {
-        characters.push("Dr Facielier");
+        characters.push("Dr Facilier");
         characters.push("Evil Queen");
         characters.push("Hades");
       }
@@ -69,6 +69,11 @@
         //verifying that inputs were valid
       if (playerCount > characters.length) {
         alert("More players than eligible characters");
+        return;
+      }
+      else {
+        var tableRow = document.getElementById("resultsRow");
+        tableRow.parentNode.removeChild(tableRow);
       }
 
       characters = shuffle(characters);
@@ -81,7 +86,8 @@
     function createCharacterBox(character) {
       var tableRow = document.getElementById("resultsRow");
       var td = document.createElement("td");
-      td.appendChild(document.createTextNode(character));
+      var img = '<img src=\"Content/Pictures/' + character + '.jpg';
+      td.innerHTML= img;
       tableRow.appendChild(td);
     }
   </script>
