@@ -73,7 +73,7 @@
       }
       else {
         var tableRow = document.getElementById("resultsRow");
-        tableRow.parentNode.removeChild(tableRow);
+        tableRow.innerHTML = '';
       }
 
       characters = shuffle(characters);
