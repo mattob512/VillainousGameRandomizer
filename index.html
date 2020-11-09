@@ -36,7 +36,8 @@
     function CreateMatchup() {
       //Creating the list of elligible characters based on user suggestions
       var characters = new Array();
-      var playerCount = document.getElementById("playerCount").val();
+      var playerList = document.getElementById("playerCount");
+      var playerCount = playerList.item(playerList.selectedIndex).value;
       var baseGame = document.getElementById("baseGame").checked;
       var expansion1 = document.getElementById("expansion1").checked;
       var expansion2 = document.getElementById("expansion2").checked;
