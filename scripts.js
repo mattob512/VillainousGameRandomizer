@@ -32,7 +32,7 @@ function CreateMatchup(numPlayers, baseGame, expansion1, expansion2, expansion3)
 
   characters = shuffle(characters);
 
-  for(int i = 0; i < numPlayers; i++) {
+  for(int i=0; i<numPlayers; i++){
     alert(characters[i]);
   }
 }
