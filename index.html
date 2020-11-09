@@ -68,13 +68,13 @@
       }
 
         //verifying that inputs were valid
-      if (numPlayers > characters.length) {
+      if (playerCount > characters.length) {
         alert("More players than eligible characters");
       }
 
       characters = shuffle(characters);
       var i;
-      for(i=0; i<numPlayers; i++){
+      for(i=0; i<playerCount; i++){
         alert(characters[i]);
       }
     }
