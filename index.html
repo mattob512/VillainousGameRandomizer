@@ -11,8 +11,8 @@
     <table>
       <tr>
         <td>
-          <label for="num-players">Number of Players: </label>
-          <select id="num-players" name="num-players">
+          <label for="playerCount">Number of Players: </label>
+          <select id="playerCount" name="playerCount">
             <option value="2">Two</option>
             <option value="3">Three</option>
             <option value="4">Four</option>
@@ -27,15 +27,21 @@
           <label for="expansion2">Villainous: Evil Comes Prepared</label><br>
           <input type="checkbox" id="expansion3" name="expansion3" value="3">
           <label for="expansion3">Villainous: Perfectly Wretched</label><br><br>
-          <input type="button" onclick="CreateMatchup(num-players, expansion1, expansion2, expansion3)">
+          <input type="button" value="Generate" onclick="CreateMatchup()">
         </td>
       </tr>
     </table>
   </body>
   <script>
-    function CreateMatchup(numPlayers, baseGame, expansion1, expansion2, expansion3) {
+    function CreateMatchup() {
       //Creating the list of elligible characters based on user suggestions
       var characters = new Array();
+      var playerCount = document.getElementById(playerCount).value;
+      var baseGame = document.getElementById("baseGame").checked;
+      var expansion1 = document.getElementById("expansion1").checked;
+      var expansion2 = document.getElementById("expansion2").checked;
+      var expansion3 = document.getElementById("expansion3").checked;
+
       if (baseGame) {
         characters.Push("Captain Hook");
         characters.Push("Jafar");
