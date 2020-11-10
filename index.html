@@ -80,16 +80,22 @@
       characters = shuffle(characters);
       var i;
       for(i=0; i<playerCount; i++){
-        createCharacterBox(characters[i]);
+        createCharacterBox(characters[i], i + 1);
       }
     }
 
-    function createCharacterBox(character) {
+    function createCharacterBox(character player) {
       var tableRow = document.getElementById("resultsRow");
       var td = document.createElement("td");
       var img = document.createElement('img');
+      var playerText = document.createElement('h2');
+      var characterText = document.createElement('h2');
       img.src = 'Content/Pictures/' + character + '.jpg';
+      playerText.textContent  = "Player " +  player;
+      characterText.textContent  = character;
+      td.appendChild(playerText);
       td.appendChild(img);
+      td.appendChild(characterText);
       tableRow.appendChild(td);
     }
   </script>
