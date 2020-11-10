@@ -87,14 +87,17 @@
     function createCharacterBox(character, player) {
       var tableRow = document.getElementById("resultsRow");
       var td = document.createElement("td");
+      var characterBox = document.createElement("div");
       var img = document.createElement('img');
       var playerText = document.createElement('h2');
       var characterText = document.createElement('h2');
+      characterBox.class = "characterBox";
       img.src = 'Content/Pictures/' + character + '.jpg';
       playerText.textContent  = "Player " +  player;
       characterText.textContent  = character;
+      characterBox.appendChild(img);
       td.appendChild(playerText);
-      td.appendChild(img);
+      td.appendChild(characterBox);
       td.appendChild(characterText);
       tableRow.appendChild(td);
     }

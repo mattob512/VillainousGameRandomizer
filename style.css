@@ -4,7 +4,11 @@ img {
 }
 
 td {
-    height: 310px;
-    width: 300px;
     border: black 3px solid;
+    text-align: center;
+}
+
+.characterBox {
+  height: 300px;
+  width: 300px;
 }
