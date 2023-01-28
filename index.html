@@ -24,7 +24,9 @@
       <input type="checkbox" id="expansion2" name="expansion2" value="2">
       <label for="expansion2">Villainous: Evil Comes Prepared</label><br>
       <input type="checkbox" id="expansion3" name="expansion3" value="3">
-      <label for="expansion3">Villainous: Perfectly Wretched</label><br><br>
+      <label for="expansion3">Villainous: Perfectly Wretched</label><br>
+      <input type="checkbox" id="expansion4" name="expansion4" value="4">
+      <label for="expansion4">Villainous: Bigger and Badder</label><br><br>
       <input type="button" value="Generate" onclick="CreateMatchup()">
     <div>
     <table id="resultsTable">
@@ -66,6 +68,11 @@
         characters.push("Mother Gothel");
         characters.push("Pete");
       }
+      if (expansion3) {
+        characters.push("Syndrome");
+        characters.push("Madam Mim");
+        characters.push("Lotso");
+      } 
 
         //verifying that inputs were valid
       if (playerCount > characters.length) {
